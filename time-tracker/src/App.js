@@ -16,9 +16,9 @@ function App() {
       type,
       image,
     } = user;
-    console.log();
     return (
       <ReportList
+        className="report"
         key={id}
         type={type}
         image={image}

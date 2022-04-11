@@ -13,8 +13,6 @@ const ReportList = (props) => {
   ];
 
   const cardsData = cards.map((card, index) => {
-    console.log(card);
-
     return (
       <TimeCard
         key={index}
@@ -31,9 +29,9 @@ const ReportList = (props) => {
   });
 
   return (
-    <div className="card-container">
+    <div className="cards-container">
       <UserCard key={id} userName={userName} />
-      <div>{cardsData}</div>
+      <div className="time-cards">{cardsData}</div>
     </div>
   );
 };

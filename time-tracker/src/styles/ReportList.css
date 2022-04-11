@@ -1,0 +1,11 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time-cards {
+  display: flex;
+  flex-flow: wrap;
+  margin: 1em;
+  padding: 1em;
+}

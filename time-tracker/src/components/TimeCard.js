@@ -15,17 +15,33 @@ const TimeCard = (props) => {
     type,
     image,
   } = props;
-  console.log(image);
   return (
-    <div className="time-card">
+    <div
+      className="time-card"
+      style={{
+        backgroundColor: `var(--${type.replace(" ", "").toLowerCase()})`,
+      }}
+    >
       {days && (
-        <div className="info-card">
-          <h1>{type}</h1>
-          <img src="./images/icon-ellipsis.svg" />
-          <h1>{currentDay}hrs</h1>
-          <h1>Yesterday {prevDay}hrs</h1>
-          <img src={image} />
-        </div>
+        <>
+          <img
+            className="img-div"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundColor: `var(--${type.replace(" ", "").toLowerCase()})`,
+            }}
+          />
+          <div className="info-card">
+            <div className="header">
+              <h4>{type}</h4>
+              <img src="./images/icon-ellipsis.svg" />
+            </div>
+            <div className="content">
+              <p className="big-text">{currentDay}hrs</p>
+              <h5 className="card-ftr">Yesterday {prevDay}hrs</h5>
+            </div>
+          </div>
+        </>
       )}
       {weeks && (
         <div className="info-card">
