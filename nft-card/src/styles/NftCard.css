@@ -1,0 +1,84 @@
+.container {
+  background-color: var(--card-bg);
+  margin: auto;
+  margin-top: 10em;
+  width: 350px;
+  border-radius: var(--border-radius);
+  color: var(--soft-blue);
+}
+
+.container:hover {
+  box-shadow: var(--box-shadow);
+}
+
+:is(.nft-image, .header, .eth, .eye):hover {
+  cursor: pointer;
+}
+
+:is(.header, a):hover {
+  color: var(--cyan);
+}
+
+.nft-image {
+  width: 90%;
+  margin-top: var(--standard-margin);
+  border-radius: var(--border-radius);
+}
+
+.header {
+  text-align: initial;
+  margin: 0.8em;
+  color: var(--white);
+}
+
+.eth {
+  color: var(--cyan);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--standard-margin);
+}
+
+:is(.days-left, .eth-container) {
+  display: flex;
+}
+
+p {
+  text-align: initial;
+  margin: var(--standard-margin);
+  font-size: var(--standard-font-size);
+}
+
+hr {
+  width: 90%;
+  border: 1px solid var(--dark-blue);
+}
+.attribution {
+  font-size: 10px;
+  padding: var(--standard-margin);
+}
+
+a {
+  text-decoration: none;
+  color: var(--soft-blue);
+}
+
+:is(.clock, .eth-image) {
+  align-self: center;
+  padding-right: 0.5em;
+}
+
+.days-left > h4 {
+  font-weight: 100;
+}
+
+.eye {
+  position: absolute;
+  margin-top: var(--standard-margin);
+  margin-left: -19.7em;
+  padding: 134px 134px;
+  border-radius: var(--border-radius);
+  background-color: hsl(178, 100%, 50%, 50%);
+}
