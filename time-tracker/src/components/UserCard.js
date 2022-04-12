@@ -23,8 +23,10 @@ const UserCard = (props) => {
       <div className="column">
         <div className="user">
           <img src={avatar} alt="user avatar" className="avatar" />
-          <div className="report">Report for</div>
-          <h1>{userName}</h1>
+          <div className="report-header">
+            <div className="report">Report for</div>
+            <h1>{userName}</h1>
+          </div>
         </div>
         <div className="selection">
           <ul>

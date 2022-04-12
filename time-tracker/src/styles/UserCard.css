@@ -25,6 +25,7 @@
   margin: 0.5em;
   margin-left: 0;
   text-align: initial;
+  padding-top: 10px;
 }
 .selection > ul > li:hover {
   cursor: pointer;
@@ -36,10 +37,9 @@
     width: 663px;
   }
   .user {
-    /* display: flex; */
     height: 100%;
   }
-  .user > h1 {
+  .report-header > h1 {
     padding-right: 1em;
   }
   .selection > ul {
@@ -57,14 +57,12 @@
     display: flex;
     flex-direction: column;
     margin: 0em;
-    width: 450px;
     height: 200px;
-    /* max-width: 700px; */
+    min-width: auto;
   }
   .user {
-    height: 60%;
-    /* width: 100%; */
     display: flex;
+    width: 100%;
   }
   .avatar > * {
     display: flex;
@@ -72,6 +70,10 @@
   }
   .selection > ul {
     flex-direction: row;
-    justify-content: space-around;
+    margin-right: 1em;
+    margin-top: 0;
+  }
+  .report-header > h1 {
+    font-size: x-large;
   }
 }

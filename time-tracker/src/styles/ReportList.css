@@ -22,10 +22,11 @@
   margin: 1em;
   color: var(--pale-blue);
 }
-.user > h1 {
+.report-header > h1 {
   font-weight: 100;
   display: flex;
   margin-left: 0.5em;
+  margin-top: 0;
   text-align: initial;
   color: var(--white);
 }
@@ -34,6 +35,7 @@
   .cards-container {
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
   }
 }
 
@@ -43,6 +45,11 @@
     justify-content: center;
   }
   .user-card {
-    width: 95%;
+    width: 93%;
+  }
+  .report {
+    margin-top: 1em;
+    margin-top: 40px;
+    margin-bottom: 0;
   }
 }
