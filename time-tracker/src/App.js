@@ -15,13 +15,14 @@ function App() {
       id,
       type,
       image,
+      userAvatar,
     } = user;
     return (
       <ReportList
-        className="report"
         key={id}
         type={type}
         image={image}
+        avatar={userAvatar}
         userName={userName}
         work={work}
         play={play}

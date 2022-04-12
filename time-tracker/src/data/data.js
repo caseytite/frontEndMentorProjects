@@ -2,6 +2,7 @@ export const data = [
   {
     id: "1",
     userName: "Jeremy Robson",
+    userAvatar: "./images/image-jeremy.png",
 
     work: [
       {

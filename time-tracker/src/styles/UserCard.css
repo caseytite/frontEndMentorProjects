@@ -1,10 +1,22 @@
-.user-card {
-  border: 1px solid black;
-  border-radius: var(--radius);
-  margin: 1em 0 1em 1em;
-  background-color: var(--dark-blue);
+.column {
+  display: flex;
+  flex-direction: column;
   width: 200px;
 }
 .user {
-  margin: 1em;
+  background-color: var(--desaturated-blue);
+  border-radius: var(--radius);
+  height: 75%;
+}
+.avatar {
+  width: 50px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  margin: 2em;
+  display: flex;
+}
+.selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
