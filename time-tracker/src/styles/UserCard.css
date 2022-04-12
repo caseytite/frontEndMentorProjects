@@ -30,10 +30,10 @@
 .selection > ul > li:hover {
   cursor: pointer;
 }
-.selected .selected-day {
+.selected-day {
   color: var(--white);
 }
-.selected {
+.unselected {
   color: var(--desaturated-blue);
 }
 

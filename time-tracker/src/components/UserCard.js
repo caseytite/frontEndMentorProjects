@@ -12,10 +12,13 @@ const UserCard = (props) => {
     weeks,
     months,
   } = props;
-  const [selected, setSelected] = useState(days);
-  const selectedClass = classNames("selected", {
-    "selected-day": days || weeks || months,
+  const selectedClass = classNames("unselected", {
+    "selected-day": days,
+    "selected-day": weeks,
+    "selected-day": months,
   });
+  const [selected, setSelected] = useState(days);
+  console.log(selected);
 
   const handleDays = () => {
     setSelected(days);
@@ -49,19 +52,19 @@ const UserCard = (props) => {
         <div className="selection">
           <ul>
             <li
-              className={selected === days && selectedClass}
+              className={selected === days ? selectedClass : undefined}
               onClick={() => handleDays()}
             >
               Daily
             </li>
             <li
-              className={selected === weeks && selectedClass}
+              className={selected === weeks ? selectedClass : undefined}
               onClick={() => handleWeeks()}
             >
               Weekly
             </li>
             <li
-              className={selected === months && selectedClass}
+              className={selected === months ? selectedClass : undefined}
               onClick={() => handleMonths()}
             >
               Monthly
