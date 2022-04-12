@@ -30,9 +30,6 @@
   margin-top: 0;
 }
 
-.content {
-  text-align: initial;
-}
 .img-div {
   height: 200px;
   background: 95% 0;
@@ -46,5 +43,17 @@
 @media (max-width: 773px) {
   .time-card {
     width: 100%;
+  }
+  .view-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .big-text {
+    margin: 18px;
+  }
+  .card-ftr {
+    margin-top: 2em;
+    font-size: var(--std-font-size);
   }
 }

@@ -3,9 +3,7 @@ import TimeCard from "./TimeCard";
 import { useState } from "react";
 import "../styles/ReportList.css";
 const ReportList = (props) => {
-  const [days, showDays] = useState(true);
-  const [weeks, showWeeks] = useState(false);
-  const [months, showMonths] = useState(false);
+  const [view, setView] = useState("days");
   const {
     work,
     play,
@@ -27,15 +25,7 @@ const ReportList = (props) => {
   ];
 
   const cardsData = cards.map((card, index) => {
-    return (
-      <TimeCard
-        key={index}
-        days={days}
-        weeks={weeks}
-        months={months}
-        {...card}
-      />
-    );
+    return <TimeCard key={index} view={view} {...card} />;
   });
 
   return (
@@ -45,12 +35,8 @@ const ReportList = (props) => {
         key={id}
         userName={userName}
         avatar={avatar}
-        showDays={showDays}
-        showWeeks={showWeeks}
-        showMonths={showMonths}
-        days={days}
-        weeks={weeks}
-        months={months}
+        setView={setView}
+        view={view}
       />
       <div className="time-cards">{cardsData}</div>
     </div>

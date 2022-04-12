@@ -26,11 +26,12 @@
   margin-left: -1em;
   text-align: initial;
   padding-top: 10px;
+  color: var(--desaturated-blue);
 }
 .selection > ul > li:hover {
   cursor: pointer;
 }
-.selected-day {
+#selected-day {
   color: var(--white);
 }
 .unselected {

@@ -1,43 +1,13 @@
 import "../styles/UserCard.css";
-import { useState } from "react";
+
 import classNames from "classnames";
 const UserCard = (props) => {
-  const {
-    userName,
-    avatar,
-    showDays,
-    showWeeks,
-    showMonths,
-    days,
-    weeks,
-    months,
-  } = props;
-  const selectedClass = classNames("unselected", {
-    "selected-day": days,
-    "selected-day": weeks,
-    "selected-day": months,
+  const { userName, avatar, setView, view } = props;
+  const selectedClass = classNames("", {
+    "selected-day": "days",
+    "selected-day": "weeks",
+    "selected-day": "months",
   });
-  const [selected, setSelected] = useState(days);
-  console.log(selected);
-
-  const handleDays = () => {
-    setSelected(days);
-    showDays(true);
-    showWeeks(false);
-    showMonths(false);
-  };
-  const handleWeeks = () => {
-    setSelected(weeks);
-    showWeeks(true);
-    showDays(false);
-    showMonths(false);
-  };
-  const handleMonths = () => {
-    setSelected(months);
-    showMonths(true);
-    showDays(false);
-    showWeeks(false);
-  };
 
   return (
     <div className="user-card">
@@ -52,20 +22,20 @@ const UserCard = (props) => {
         <div className="selection">
           <ul>
             <li
-              className={selected === days ? selectedClass : undefined}
-              onClick={() => handleDays()}
+              id={view === "days" ? selectedClass : undefined}
+              onClick={() => setView("days")}
             >
               Daily
             </li>
             <li
-              className={selected === weeks ? selectedClass : undefined}
-              onClick={() => handleWeeks()}
+              id={view === "weeks" ? selectedClass : undefined}
+              onClick={() => setView("weeks")}
             >
               Weekly
             </li>
             <li
-              className={selected === months ? selectedClass : undefined}
-              onClick={() => handleMonths()}
+              id={view === "months" ? selectedClass : undefined}
+              onClick={() => setView("months")}
             >
               Monthly
             </li>
