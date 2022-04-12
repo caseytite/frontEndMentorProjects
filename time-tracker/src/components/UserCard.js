@@ -1,18 +1,36 @@
 import "../styles/UserCard.css";
+import { useState } from "react";
+import classNames from "classnames";
 const UserCard = (props) => {
-  const { userName, avatar, showDays, showWeeks, showMonths } = props;
+  const {
+    userName,
+    avatar,
+    showDays,
+    showWeeks,
+    showMonths,
+    days,
+    weeks,
+    months,
+  } = props;
+  const [selected, setSelected] = useState(days);
+  const selectedClass = classNames("selected", {
+    "selected-day": days || weeks || months,
+  });
 
   const handleDays = () => {
+    setSelected(days);
     showDays(true);
     showWeeks(false);
     showMonths(false);
   };
   const handleWeeks = () => {
+    setSelected(weeks);
     showWeeks(true);
     showDays(false);
     showMonths(false);
   };
   const handleMonths = () => {
+    setSelected(months);
     showMonths(true);
     showDays(false);
     showWeeks(false);
@@ -30,9 +48,24 @@ const UserCard = (props) => {
         </div>
         <div className="selection">
           <ul>
-            <li onClick={() => handleDays()}>Daily</li>
-            <li onClick={() => handleWeeks()}>Weekly</li>
-            <li onClick={() => handleMonths()}>Monthly</li>
+            <li
+              className={selected === days && selectedClass}
+              onClick={() => handleDays()}
+            >
+              Daily
+            </li>
+            <li
+              className={selected === weeks && selectedClass}
+              onClick={() => handleWeeks()}
+            >
+              Weekly
+            </li>
+            <li
+              className={selected === months && selectedClass}
+              onClick={() => handleMonths()}
+            >
+              Monthly
+            </li>
           </ul>
         </div>
       </div>

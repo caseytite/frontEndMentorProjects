@@ -48,6 +48,9 @@ const ReportList = (props) => {
         showDays={showDays}
         showWeeks={showWeeks}
         showMonths={showMonths}
+        days={days}
+        weeks={weeks}
+        months={months}
       />
       <div className="time-cards">{cardsData}</div>
     </div>
