@@ -28,7 +28,8 @@ const TimeCard = (props) => {
         style={{
           backgroundImage,
         }}
-      />
+        alt={`${type} card background`}
+      ></img>
       <div className="info-card">
         <div className="header">
           <h4>{type}</h4>

@@ -4,9 +4,7 @@ import classNames from "classnames";
 const UserCard = (props) => {
   const { userName, avatar, setView, view } = props;
   const selectedClass = classNames("", {
-    "selected-day": "days",
-    "selected-day": "weeks",
-    "selected-day": "months",
+    "selected-day": "days" || "weeks" || "months",
   });
 
   return (
