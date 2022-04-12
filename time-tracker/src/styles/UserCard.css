@@ -20,3 +20,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.selection > ul > li {
+  display: flex;
+  margin: 0.5em;
+  margin-left: 0;
+  text-align: initial;
+}
+.selection > ul > li:hover {
+  cursor: pointer;
+}

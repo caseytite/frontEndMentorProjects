@@ -1,13 +1,11 @@
 import UserCard from "./UserCard";
 import TimeCard from "./TimeCard";
-import { useState, useContext } from "react";
-import CardContext from "../context/cardContext";
+import { useState } from "react";
 import "../styles/ReportList.css";
 const ReportList = (props) => {
   const [days, showDays] = useState(true);
   const [weeks, showWeeks] = useState(false);
   const [months, showMonths] = useState(false);
-  const context = useContext(CardContext);
   const {
     work,
     play,
@@ -32,17 +30,10 @@ const ReportList = (props) => {
     return (
       <TimeCard
         key={index}
-        type={card.type}
-        image={card.image}
-        currentDay={card.currentDay}
-        prevDay={card.prevDay}
-        currentWeekHrs={card.currentWeekHrs}
-        prevWeekHrs={card.prevWeekHrs}
-        currentMonthHrs={card.currentMonthHrs}
-        prevMonthHrs={card.prevMonthHrs}
         days={days}
         weeks={weeks}
         months={months}
+        {...card}
       />
     );
   });

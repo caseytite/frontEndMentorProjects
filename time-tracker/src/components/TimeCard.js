@@ -1,4 +1,3 @@
-import { useState, useContext } from "react";
 import "../styles/TimeCard.css";
 
 const TimeCard = (props) => {
