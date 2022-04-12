@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 1em;
-  padding: 12em 1em;
+  padding: 12em 1em -1em 1em;
 }
 .time-cards {
   display: flex;
@@ -15,7 +15,6 @@
   border-radius: var(--radius);
   margin: 1em;
   background-color: var(--dark-blue);
-  max-height: 437px;
 }
 .report {
   display: flex;
