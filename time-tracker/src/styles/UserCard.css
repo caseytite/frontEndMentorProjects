@@ -29,3 +29,49 @@
 .selection > ul > li:hover {
   cursor: pointer;
 }
+
+@media (max-width: 1008px) {
+  .column {
+    flex-direction: row;
+    width: 663px;
+  }
+  .user {
+    /* display: flex; */
+    height: 100%;
+  }
+  .user > h1 {
+    padding-right: 1em;
+  }
+  .selection > ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 773px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+    width: 450px;
+    height: 200px;
+    /* max-width: 700px; */
+  }
+  .user {
+    height: 60%;
+    /* width: 100%; */
+    display: flex;
+  }
+  .avatar > * {
+    display: flex;
+    flex-direction: column;
+  }
+  .selection > ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

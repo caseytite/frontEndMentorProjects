@@ -39,19 +39,19 @@ const TimeCard = (props) => {
           {days && (
             <div className="content">
               <p className="big-text">{currentDay}hrs</p>
-              <h5 className="card-ftr">Yesterday {prevDay}hrs</h5>
+              <h5 className="card-ftr">Yesterday - {prevDay}hrs</h5>
             </div>
           )}
           {weeks && (
             <div className="content">
               <p className="big-text">{currentWeekHrs}hrs</p>
-              <h5 className="card-ftr">Last week {prevWeekHrs}hrs</h5>
+              <h5 className="card-ftr">Last week - {prevWeekHrs}hrs</h5>
             </div>
           )}
           {months && (
             <div className="content">
               <p className="big-text">{currentMonthHrs}hrs</p>
-              <h5 className="card-ftr">Last month {prevMonthHrs}hrs</h5>
+              <h5 className="card-ftr">Last month - {prevMonthHrs}hrs</h5>
             </div>
           )}
         </div>
