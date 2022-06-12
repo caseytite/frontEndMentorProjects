@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { Container } from "./components/styles/Container.styled";
 
 import GlobalStyles from "./components/styles/Global";
+import updateCards from "./helpers";
 
 import Header from "./components/Header";
 import Card from "./components/Card";
@@ -24,27 +25,16 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [data, setData] = useState(content);
   const [addingCard, setAddingCard] = useState(false);
+  const { handleAddCard, handleRemoveCard } = updateCards(
+    setData,
+    data,
+    setAddingCard
+  );
 
   const handleDarkMode = () => {
     setDarkMode((prev) => !prev);
   };
-
-  const handleRemoveCard = (id) => {
-    setData((prev) => [...prev.filter((item) => item.id !== id)]);
-  };
-
   const handleShowForm = () => {
-    setAddingCard((prev) => !prev);
-  };
-  const handleAddCard = (title, body) => {
-    const image = "illustration-flowing-conversation.svg";
-    const newCard = {
-      id: cards.length + 1,
-      title,
-      body,
-      image,
-    };
-    setData((prev) => [newCard, ...prev]);
     setAddingCard((prev) => !prev);
   };
 

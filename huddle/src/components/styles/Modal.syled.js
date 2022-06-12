@@ -5,7 +5,7 @@ export const StyledModal = styled.div`
   display: flex;
   color: black;
   justify-content: center;
-  top: 20vh;
+  top: 40%;
   left: 25%;
   width: 50%;
   background-color: white;
