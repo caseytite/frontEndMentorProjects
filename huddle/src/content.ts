@@ -1,4 +1,6 @@
-const content = [
+import { CardType } from "./components/types/types";
+
+const content: CardType[] = [
   {
     id: 1,
     title: "Grow Together",

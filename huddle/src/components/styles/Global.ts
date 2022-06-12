@@ -1,14 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+interface SStyles {
+  darkMode: boolean;
+  body: string;
+}
+
+const GlobalStyles = createGlobalStyle<SStyles>`
   * {
     box-sizing: border-box;
   }
   body {
-    background: ${({ theme, darkMode }) =>
-      darkMode ? "black" : theme.colors.body};
-    color: ${({ theme, darkMode }) =>
-      darkMode ? "white" : "hsl(192, 100%, 9%)"};
+    background: ${({ body, darkMode }) => (darkMode ? "black" : body)};
+    color: ${({ darkMode }) => (darkMode ? "white" : "hsl(192, 100%, 9%)")};
     font-family: 'Poppins', sans-serif;
     font-size: 1.15em;
     margin: 0;

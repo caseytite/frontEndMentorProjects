@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const StyledCard = styled.div`
+interface SCType {
+  darkMode: boolean;
+  index: number;
+}
+
+export const StyledCard = styled.div<SCType>`
   display: flex;
   align-items: center;
   background-color: ${({ darkMode }) => (darkMode ? "black" : "#fff")};

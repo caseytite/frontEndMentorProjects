@@ -4,7 +4,12 @@ import { Container } from "./styles/Container.styled";
 import { Flex } from "./styles/Flex.styled";
 import Button from "./Button";
 
-const Header = ({ darkMode, handleDarkMode }) => {
+interface HProps {
+  darkMode: boolean;
+  handleDarkMode: () => void;
+}
+
+const Header: React.FC<HProps> = ({ darkMode, handleDarkMode }) => {
   const lightLogo = "./images/logo_white.svg";
   const darkLogo = "./images/logo.svg";
   return (
