@@ -22,5 +22,7 @@ export const StyledForm = styled.form`
   }
   button {
     margin-top: 10px;
+    width: 50%;
+    align-self: center;
   }
 `;

@@ -1,17 +1,23 @@
-import { StyledModal } from "./styles/Modal.syled";
+import { StyledModal, StyledBackDrop } from "./styles/Modal.syled";
 import { createPortal } from "react-dom";
-import Button from "./Button";
 
-const Modal = ({ message, closeModal }) => {
-  const location = document.getElementById("portal");
+export const Modal = ({ message }) => {
+  const location = document.getElementById("modal");
   return createPortal(
     <StyledModal>
       <p>{message}</p>
-      <Button text={"Dismiss"} onClick={() => closeModal("")} />
     </StyledModal>,
 
     location
   );
 };
 
-export default Modal;
+export const BackDrop = (props) => {
+  return (
+    <StyledBackDrop
+      onMouseDownCapture={() => props.closeModal((prev) => !prev)}
+    >
+      {props.children}
+    </StyledBackDrop>
+  );
+};

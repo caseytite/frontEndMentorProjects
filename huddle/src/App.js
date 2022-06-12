@@ -66,7 +66,7 @@ const App = () => {
         <Button
           bg="#ff0099"
           color="#fff"
-          text={"Add a Card"}
+          text={`${addingCard ? "Close" : "Add a Card"}`}
           onClick={handleShowForm}
         />
       </div>

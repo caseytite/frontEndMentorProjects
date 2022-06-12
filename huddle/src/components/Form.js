@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { StyledForm } from "./styles/Form.styled";
 import Button from "./Button";
-import Modal from "./Modal";
+import { Modal, BackDrop } from "./Modal";
 
 const Form = ({ handleAddCard }) => {
   const [error, setError] = useState("");
@@ -40,7 +40,11 @@ const Form = ({ handleAddCard }) => {
           sendNewCard(e, titleEl.current.value, descriptionEl.current.value)
         }
       />
-      {error && <Modal message={error} closeModal={setError} />}
+      {error && (
+        <BackDrop closeModal={setError}>
+          <Modal message={error} />
+        </BackDrop>
+      )}
     </StyledForm>
   );
 };
