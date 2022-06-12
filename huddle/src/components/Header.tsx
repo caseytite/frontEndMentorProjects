@@ -3,11 +3,7 @@ import { StyledHeader, Nav, Logo, Image } from "./styles/Header.styled";
 import { Container } from "./styles/Container.styled";
 import { Flex } from "./styles/Flex.styled";
 import Button from "./Button";
-
-interface HProps {
-  darkMode: boolean;
-  handleDarkMode: () => void;
-}
+import { HProps } from "./types/props";
 
 const Header: React.FC<HProps> = ({ darkMode, handleDarkMode }) => {
   const lightLogo = "./images/logo_white.svg";

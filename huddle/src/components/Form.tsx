@@ -2,10 +2,7 @@ import { useRef, useState } from "react";
 import { StyledForm } from "./styles/Form.styled";
 import Button from "./Button";
 import { Modal, BackDrop } from "./Modal";
-
-interface FProps {
-  handleAddCard: (title: string, description: string) => void;
-}
+import { FProps } from "./types/props";
 
 const Form: React.FC<FProps> = ({ handleAddCard }) => {
   const [error, setError] = useState<string | boolean>("");

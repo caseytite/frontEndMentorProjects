@@ -1,15 +1,8 @@
 import { StyledCard } from "./styles/Card.styled";
 import Button from "./Button";
+import { SingleCard } from "./types/props";
 
-import { CardType } from "./types/types";
-interface OneCard {
-  item: CardType;
-  handleRemoveCard: (id: number) => void;
-  darkMode: boolean;
-  index: number;
-}
-
-const Card: React.FC<OneCard> = ({
+const Card: React.FC<SingleCard> = ({
   item,
   handleRemoveCard,
   darkMode,

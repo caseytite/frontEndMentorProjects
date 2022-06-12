@@ -1,12 +1,5 @@
 import { StyledButton } from "./styles/Button.styled";
-
-interface BProps {
-  onClick?: () => void;
-  text?: string;
-  bg?: string;
-  color?: string;
-  type?: string;
-}
+import { BProps } from "./types/props";
 
 const Button: React.FC<BProps> = ({ onClick, text, bg, color }) => {
   return (

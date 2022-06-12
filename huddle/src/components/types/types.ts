@@ -1,9 +1,9 @@
-export interface CardType {
+export type CardType = {
   id: number;
   title: string;
   body: string;
   image: string;
-}
+};
 
 export interface Helper {
   setData: () => void;

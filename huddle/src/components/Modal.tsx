@@ -1,15 +1,8 @@
 import { StyledModal, StyledBackDrop } from "./styles/Modal.syled";
 import { createPortal } from "react-dom";
+import { ModalProps, BackDropProps } from "./types/props";
 
-interface MProps {
-  message: string | boolean;
-}
-interface BDProps {
-  closeModal: React.Dispatch<React.SetStateAction<string | boolean>>;
-  children: JSX.Element;
-}
-
-export const Modal: React.FC<MProps> = ({ message }) => {
+export const Modal: React.FC<ModalProps> = ({ message }) => {
   const location = document.getElementById("modal") as HTMLDivElement;
   return createPortal(
     <StyledModal>
@@ -20,14 +13,12 @@ export const Modal: React.FC<MProps> = ({ message }) => {
   );
 };
 
-export const BackDrop: React.FC<BDProps> = (props) => {
+export const BackDrop: React.FC<BackDropProps> = ({ children, closeModal }) => {
   return (
     <StyledBackDrop
-      onMouseDownCapture={() =>
-        props.closeModal((prev: string | boolean) => !prev)
-      }
+      onMouseDownCapture={() => closeModal((prev: string | boolean) => !prev)}
     >
-      {props.children}
+      {children}
     </StyledBackDrop>
   );
 };

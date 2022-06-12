@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-interface SCType {
+type SCType = {
   darkMode: boolean;
   index: number;
-}
+};
 
 export const StyledCard = styled.div<SCType>`
   display: flex;
