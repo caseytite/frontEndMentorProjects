@@ -1,7 +1,13 @@
 import { StyledCard } from "./styles/Card.styled";
 import Button from "./Button";
+import { SingleCard } from "./types/props";
 
-const Card = ({ item, handleRemoveCard, darkMode, index }) => {
+const Card: React.FC<SingleCard> = ({
+  item,
+  handleRemoveCard,
+  darkMode,
+  index,
+}) => {
   const { id, title, body, image } = item;
   return (
     <>

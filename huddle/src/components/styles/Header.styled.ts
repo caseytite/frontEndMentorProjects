@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+interface SHeader {
+  darkMode: boolean;
+}
+
+export const StyledHeader = styled.header<SHeader>`
   background-color: ${({ theme, darkMode }) =>
     darkMode ? "black" : theme.colors.header};
   padding: 40px 0;

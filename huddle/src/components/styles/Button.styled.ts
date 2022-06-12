@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { B1Type } from "../types/types";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<B1Type>`
   border-radius: 50px;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);

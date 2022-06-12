@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { Container } from "./components/styles/Container.styled";
 
 import GlobalStyles from "./components/styles/Global";
+
 import updateCards from "./helpers";
 
 import Header from "./components/Header";
@@ -12,7 +13,9 @@ import Form from "./components/Form";
 
 import content from "./content";
 
-const theme = {
+import { CardType, MTheme } from "./components/types/types";
+
+const theme: MTheme = {
   colors: {
     header: "#ebfbff",
     body: "white",
@@ -22,9 +25,9 @@ const theme = {
 };
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [data, setData] = useState(content);
-  const [addingCard, setAddingCard] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [data, setData] = useState<CardType[]>(content);
+  const [addingCard, setAddingCard] = useState<boolean>(false);
   const { handleAddCard, handleRemoveCard } = updateCards(
     setData,
     data,
@@ -38,7 +41,7 @@ const App = () => {
     setAddingCard((prev) => !prev);
   };
 
-  const cards = data.map((item, index) => (
+  const cards = data.map<JSX.Element>((item: CardType, index: number) => (
     <Card
       key={item.id}
       index={index}
@@ -50,7 +53,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles darkMode={darkMode} />
+      <GlobalStyles darkMode={darkMode} body={theme.colors.body} />
       <Header darkMode={darkMode} handleDarkMode={handleDarkMode} />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Button
