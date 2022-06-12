@@ -29,9 +29,9 @@ const Form: React.FC<FProps> = ({ handleAddCard }) => {
   return (
     <StyledForm onSubmit={(e) => e.preventDefault()}>
       <label>Title</label>
-      <input ref={titleEl} required />
+      <input ref={titleEl} />
       <label>Description</label>
-      <textarea ref={descriptionEl} required />
+      <textarea ref={descriptionEl} />
       <Button
         bg="#ff0099"
         color="#fff"
